@@ -23,9 +23,14 @@ public class Printer {
         }
     }
 
-    public void print(int copies){
-        this.paperLeft = this.paperLeft - copies;
-        this.toner = this.toner - copies;
+    public boolean print(int copies){
+        if (willPrint(copies) == true){
+            this.paperLeft = this.paperLeft - copies;
+            this.toner = this.toner - copies;
+        } else {
+            return false;
+        }
+        return false;
     }
 
 

@@ -42,5 +42,10 @@ public class PrinterTest {
         assertEquals(20, printer.checkTonerLeft());
     }
 
+    @Test
+    public void willNotPrintWithPrint(){
+        assertEquals(false, printer.print(40));
+    }
+
 
 }
